@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Логопед-дефектолог Вахитова Дилрух Шавкатовна | Ташкент</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #4A90E2;
+            --primary-light: #EBF3FC;
+            --secondary: #66BB6A;
+            --secondary-light: #E8F5E9;
+            --accent: #FFA726;
+            --text-dark: #2C3E50;
+            --text-light: #7F8C8D;
+            --bg-light: #F9FBFC;
+            --card-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            --border-radius: 20px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Nunito', sans-serif;
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Navigation */
+        header {
+            background-color: white;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.03);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 80px;
+        }
+
+        .logo {
+            font-size: 20px;
+            font-weight: 800;
+            color: var(--primary);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo i {
+            font-size: 24px;
+            color: var(--secondary);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 600;
+            font-size: 16px;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        .btn-call {
+            background-color: var(--primary);
+            color: white !important;
+            padding: 10px 22px;
+            border-radius: 30px;
+            transition: all 0.3s !important;
+            box-shadow: 0 4px 10px rgba(74, 144, 226, 0.2);
+        }
+
+        .btn-call:hover {
+            background-color: #357ABD;
+            transform: translateY(-2px);
+        }
+
+        /* Hero Section */
+        .hero {
+            padding-top: 160px;
+            padding-bottom: 80px;
+            background: linear-gradient(135deg, #FFF 0%, var(--primary-light) 100%);
+            position: relative;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 60px;
+            background: var(--bg-light);
+            clip-path: ellipse(60% 40px at 50% 60px);
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .hero-text h1 {
+            font-size: 42px;
+            color: var(--text-dark);
+            line-height: 1.2;
+            margin-bottom: 20px;
+        }
+
+        .hero-text h1 span {
+            color: var(--primary);
+        }
+
+        .subtitle {
+            font-size: 22px;
+            font-weight: 600;
+            color: var(--secondary);
+            margin-bottom: 25px;
+        }
+
+        .hero-badges {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 35px;
+        }
+
+        .badge {
+            background: white;
+            padding: 10px 20px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 15px;
+            box-shadow: var(--card-shadow);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--text-dark);
+        }
+
+        .badge i {
+            color: var(--accent);
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 15px 35px;
+            border-radius: 50px;
+            font-size: 16px;
+            font-weight: 700;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        .btn-primary {
+            background-color: var(--secondary);
+            color: white;
+            box-shadow: 0 6px 15px rgba(102, 187, 106, 0.3);
+        }
+
+        .btn-primary:hover {
+            background-color: #55A659;
+            transform: translateY(-3px);
+        }
+
+        .btn-secondary {
+            background-color: white;
+            color: var(--text-dark);
+            border: 2px solid #E2E8F0;
+        }
+
+        .btn-secondary:hover {
+            background-color: #F8FAFC;
+            border-color: var(--primary);
+            transform: translateY(-3px);
+        }
+
+        .hero-image-container {
+            position: relative;
+            display: flex;
+            justify-content: center;
+        }
+
+        .hero-image {
+            width: 100%;
+            max-width: 380px;
+            border-radius: 30px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            border: 8px solid white;
+            transform: rotate(2deg);
+            transition: transform 0.3s;
+        }
+
+        .hero-image:hover {
+            transform: rotate(0deg) scale(1.02);
+        }
+
+        /* Sections General */
+        section {
+            padding: 100px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 32px;
+            margin-bottom: 60px;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 70px;
+            height: 5px;
+            background: var(--primary);
+            border-radius: 10px;
+            margin: 15px auto 0;
+        }
+
+        /* Services Section */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .service-card {
+            background: white;
+            padding: 35px 30px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--card-shadow);
+            transition: all 0.3s;
+            border-top: 5px solid transparent;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+        }
+
+        .service-card.primary-edge { border-top-color: var(--primary); }
+        .service-card.secondary-edge { border-top-color: var(--secondary); }
+        .service-card.accent-edge { border-top-color: var(--accent); }
+
+        .service-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            margin-bottom: 25px;
+        }
+
+        .service-card.primary-edge .service-icon { background: var(--primary-light); color: var(--primary); }
+        .service-card.secondary-edge .service-icon { background: var(--secondary-light); color: var(--secondary); }
+        .service-card.accent-edge .service-icon { background: #FFF3E0; color: var(--accent); }
+
+        .service-card h3 {
+            font-size: 20px;
+            margin-bottom: 15px;
+            color: var(--text-dark);
+        }
+
+        .service-card p {
+            color: var(--text-light);
+            font-size: 15px;
+        }
+
+        /* Portfolio / Certificates Section */
+        .bg-white {
+            background-color: white;
+        }
+
+        .certificates-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .cert-card {
+            background: var(--bg-light);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--card-shadow);
+            cursor: pointer;
+            transition: all 0.3s;
+            border: 1px solid #EBF1F6;
+        }
+
+        .cert-card:hover {
+            transform: scale(1.03);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+        }
+
+        .cert-img-wrapper {
+            position: relative;
+            padding-bottom: 72%; /* Document ratio */
+            overflow: hidden;
+            background: #eaeaea;
+        }
+
+        .cert-img-wrapper img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .cert-info {
+            padding: 20px;
+        }
+
+        .cert-info h4 {
+            font-size: 16px;
+            margin-bottom: 8px;
+            color: var(--text-dark);
+        }
+
+        .cert-info p {
+            color: var(--text-light);
+            font-size: 14px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        /* Contact Section */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: start;
+        }
+
+        .contact-info-block {
+            background: white;
+            padding: 40px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--card-shadow);
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .contact-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .contact-icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 50px;
+            background: var(--primary-light);
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            flex-shrink: 0;
+        }
+
+        .contact-text h4 {
+            font-size: 16px;
+            color: var(--text-light);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 5px;
+        }
+
+        .contact-text p, .contact-text a {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--text-dark);
+            text-decoration: none;
+        }
+
+        .contact-text a:hover {
+            color: var(--primary);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 10px;
+        }
+
+        .social-icon {
+            width: 45px;
+            height: 45px;
+            border-radius: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            color: white;
+            text-decoration: none;
+            transition: transform 0.3s;
+        }
+
+        .social-icon.instagram { background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); }
+        .social-icon.telegram { background-color: #2DE0; background: #24A1DE; }
+
+        .social-icon:hover {
+            transform: translateY(-5px);
+        }
+
+        .map-wrapper {
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--card-shadow);
+            height: 380px;
+            border: 8px solid white;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--text-dark);
+            color: white;
+            text-align: center;
+            padding: 30px 0;
+            font-size: 15px;
+        }
+
+        footer p {
+            opacity: 0.8;
+        }
+
+        /* Lightbox for Certificates */
+        .lightbox {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.8);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 2000;
+            padding: 20px;
+        }
+
+        .lightbox.active {
+            display: flex;
+        }
+
+        .lightbox-content {
+            max-width: 90%;
+            max-height: 85vh;
+            border-radius: 10px;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.5);
+        }
+
+        .lightbox-close {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            color: white;
+            font-size: 40px;
+            cursor: pointer;
+        }
+
+        /* Responsive */
+        @media (max-width: 992px) {
+            .hero-grid {
+                grid-template-columns: 1fr;
+                text-align: center;
+                gap: 40px;
+            }
+            .hero-badges {
+                justify-content: center;
+            }
+            .hero-buttons {
+                justify-content: center;
+            }
+            .hero-image-container {
+                order: -1;
+            }
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            .hero-text h1 {
+                font-size: 32px;
+            }
+            .section-title {
+                font-size: 26px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header>
+        <div class="container nav-container">
+            <a href="#" class="logo">
+                <i class="fa-solid fa-child-holding-hands"></i> Логопед-Дефектолог
+            </a>
+            <ul class="nav-links">
+                <li><a href="#about">Обо мне</a></li>
+                <li><a href="#services">Направления</a></li>
+                <li><a href="#certificates">Сертификаты</a></li>
+                <li><a href="#contacts">Контакты</a></li>
+                <li><a href="tel:+998914187792" class="btn-call"><i class="fa-solid fa-phone"></i> Позвонить</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="about">
+        <div class="container hero-grid">
+            <div class="hero-text">
+                <div class="subtitle">Логопед - Дефектолог</div>
+                <h1>Вахитова <br><span>Дилрух Шавкатовна</span></h1>
+                <p style="font-size: 18px; color: var(--text-light); margin-bottom: 30px;">
+                    Профессиональная помощь в преодолении речевых и коммуникативных трудностей. Индивидуальный, заботливый и комплексный подход к развитию каждого ребенка.
+                </p>
+                <div class="hero-badges">
+                    <div class="badge"><i class="fa-solid fa-graduation-cap"></i> Опыт работы 2 года</div>
+                  
+                </div>
+                <div class="hero-buttons">
+                    <a href="https://t.me/+CCeAb6lSlkhjZWIy" target="_blank" class="btn btn-primary">
+                        <i class="fa-brands fa-telegram"></i> Записаться в Telegram
+                    </a>
+                    
+                </div>
+            </div>
+            <div class="hero-image-container">
+                <!-- Using placeholder for visual presentation, replaced by client file later -->
+                <img src="photo_2025-12-30_21-54-50.jpg" alt="Вахитова Дилрух Шавкатовна" class="hero-image">
+            </div>
+        </div>
+    </section>
+
+    <!-- Services / Directions Section -->
+    <section id="services">
+        <div class="container">
+            <h2 class="section-title">Направления работы</h2>
+            <div class="services-grid">
+                
+                <div class="service-card primary-edge">
+                    <div class="service-icon"><i class="fa-solid fa-brain"></i></div>
+                    <h3>Развитие речи и моторики</h3>
+                    <p>Комплексные занятия по запуску речи, обогащению словарного запаса и развитию мелкой моторики рук для стимуляции речевых центров.</p>
+                </div>
+
+                <div class="service-card secondary-edge">
+                    <div class="service-icon"><i class="fa-solid fa-comments"></i></div>
+                    <h3>Дислалия и Алалия</h3>
+                    <p>Коррекция звукопроизношения при сохранном слухе и интеллекте, а также работа при полном или частичном отсутствии речи.</p>
+                </div>
+
+                <div class="service-card accent-edge">
+                    <div class="service-icon"><i class="fa-solid fa-puzzle-piece"></i></div>
+                    <h3>Работа с аутистами</h3>
+                    <p>Бережная адаптация, выстраивание коммуникативных навыков, социализация и стимуляция речевой активности у детей с РАС.</p>
+                </div>
+
+                <div class="service-card primary-edge">
+                    <div class="service-icon"><i class="fa-solid fa-bolt"></i></div>
+                    <h3>СДВГ и ММД</h3>
+                    <p>Занятия с детьми, имеющими синдром дефицита внимания и гиперактивности или минимальные мозговые дисфункции. Повышение концентрации.</p>
+                </div>
+
+                <div class="service-card secondary-edge">
+                    <div class="service-icon"><i class="fa-solid fa-wave-square"></i></div>
+                    <h3>Заикание</h3>
+                    <p>Формирование навыков плавной, слитной и ритмичной речи, снятие речевых судорог и психологического напряжения.</p>
+                </div>
+
+                <div class="service-card accent-edge">
+                    <div class="service-icon"><i class="fa-solid fa-face-smile"></i></div>
+                    <h3>Ринолалия</h3>
+                    <p>Преодоление нарушений звукопроизношения и тембра голоса, обусловленных анатомическими дефектами речевого аппарата.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Certificates Section -->
+    <section id="certificates" class="bg-white">
+        <div class="container">
+            <h2 class="section-title">Повышение квалификации</h2>
+            <div class="certificates-grid">
+                
+                <div class="cert-card" onclick="openLightbox(this)">
+                    <div class="cert-img-wrapper">
+                        <img src="photo_2026-06-16_11-59-46.jpg" alt="Сертификат Диагностика к коррекции">
+                    </div>
+                    <div class="cert-info">
+                        <h4>От диагностики к коррекции</h4>
+                        <p><span>Формула Логопедии</span></p>
+                    </div>
+                </div>
+
+                <div class="cert-card" onclick="openLightbox(this)">
+                    <div class="cert-img-wrapper">
+                        <img src="photo_2026-06-16_11-59-52.jpg" alt="Сертификат Дизартрия и диспраксия">
+                    </div>
+                    <div class="cert-info">
+                        <h4>Дизартрия и диспраксия: инструкция для работы</h4>
+                        <p><span>ИРСП (Институт Развития Современной Педагогики)</span></p>
+                    </div>
+                </div>
+
+                <div class="cert-card" onclick="openLightbox(this)">
+                    <div class="cert-img-wrapper">
+                        <img src="photo_2026-06-16_11-59-50.jpg" alt="Сертификат Как запустить речь">
+                    </div>
+                    <div class="cert-info">
+                        <h4>Как запустить речь у ребёнка - пошаговая система</h4>
+                        <p><span>Вебинар А.И. Неженец</span></p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Contacts Section -->
+    <section id="contacts">
+        <div class="container">
+            <h2 class="section-title">Контакты и Запись</h2>
+            <div class="contact-grid">
+                
+                <div class="contact-info-block">
+                    <div class="contact-item">
+                        <div class="contact-icon"><i class="fa-solid fa-phone"></i></div>
+                        <div class="contact-text">
+                            <h4>Телефон</h4>
+                            <p><a href="tel:+998914187792">+998 (91) 418-77-92</a></p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon"><i class="fa-solid fa-location-dot"></i></div>
+                        <div class="contact-text">
+                            <h4>Адрес клиники</h4>
+                            <p><a href="https://yandex.uz/maps/-/CPxbAQ1I" target="_blank">Открыть на Яндекс.Картах</a></p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon"><i class="fa-solid fa-share-nodes"></i></div>
+                        <div class="contact-text">
+                            <h4>Мы в соцсетях</h4>
+                            <div class="social-links">
+                                <a href="https://www.instagram.com/vaxitova_dilrux_shavkatovna/?hl=ru" target="_blank" class="social-icon instagram"><i class="fa-brands fa-instagram"></i></a>
+                                <a href="https://t.me/+CCeAb6lSlkhjZWIy" target="_blank" class="social-icon telegram"><i class="fa-brands fa-telegram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+               <div class="map-wrapper">
+                <iframe src="https://yandex.ru/map-widget/v1/?ll=64.417246%2C39.741703&z=17&pt=64.417246%2C39.741703%2Cpm2blm" width="100%" height="100%" frameborder="0" allowfullscreen="true" style="position:relative; border:0;"></iframe>
+            </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Вахитова Дилрух Шавкатовна. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <!-- Lightbox Element -->
+    <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+        <span class="lightbox-close">&times;</span>
+        <img class="lightbox-content" id="lightbox-img">
+    </div>
+
+    <!-- Simple JS Dynamic Actions -->
+    <script>
+        function openLightbox(element) {
+            var imgSrc = element.getElementsByTagName('img')[0].src;
+            document.getElementById('lightbox-img').src = imgSrc;
+            document.getElementById('lightbox').classList.add('active');
+        }
+
+        function closeLightbox() {
+            document.getElementById('lightbox').classList.remove('active');
+        }
+
+        // Header scroll effect
+        window.addEventListener('scroll', function() {
+            var header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.style.padding = '10px 0';
+                header.style.boxShadow = '0 4px 20px rgba(0,0,0,0.08)';
+            } else {
+                header.style.padding = '0';
+                header.style.boxShadow = '0 2px 15px rgba(0,0,0,0.03)';
+            }
+        });
+    </script>
+</body>
+</html>
